@@ -34,24 +34,18 @@ function parseNum(num, first, second, third) {
   if (num.toString().indexOf(first.toString()) >= 0) {
     result = fizz;
   } else {
-    result = rul3And4(first, second, third, num);
-  }
-  return result;
-}
-
-function rul3And4(first, second, third, num) {
-  let result = "";
-  if (num % first === 0) {
-    result += fizz;
-  }
-  if (num % second === 0) {
-    result += buzz;
-  }
-  if (num % third === 0) {
-    result += whizz;
-  }
-  if (isEmpty(result)) {
-    result = num.toString();
+    if (num % first === 0) {
+      result += fizz;
+    }
+    if (num % second === 0) {
+      result += buzz;
+    }
+    if (num % third === 0) {
+      result += whizz;
+    }
+    if (isEmpty(result)) {
+      result = num.toString();
+    }
   }
   return result;
 }
