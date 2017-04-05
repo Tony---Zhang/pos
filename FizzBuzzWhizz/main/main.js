@@ -7,40 +7,47 @@ const numberSize = 100;
 
 function fizzBuzzWhizz(numbers) {
   if (validate(numbers, error => {
-      console.log("Invalidate number: " + error.toString());
+      console.log(error.toString());
     })) {
-    let result;
     for (let i = 1; i < numberSize; i++) {
-      result = "";
-      if (i.toString().indexOf(numbers[0].toString()) >= 0) {
-        result = fizz;
-      } else {
-        result = rul3And4(numbers[0], numbers[1], numbers[2], i);
-      }
-      console.log(result);
+      console.log(parseNum(i, numbers[0], numbers[1], numbers[2]));
     }
   }
 }
 
 function validate(numbers, error) {
+  if (numbers == null || numbers.length != 3) {
+    error("Illegal arguments, need 3 positive number array");
+    return false;
+  }
   for (let number of numbers) {
     if (!isPositiveInteger(number)) {
-      error(number);
+      error("Invalidate number: " + number);
       return false;
     }
   }
   return true;
 }
 
-function rul3And4(firstNum, secondNum, thirdNum, num) {
+function parseNum(num, first, second, third) {
   let result = "";
-  if (num % firstNum === 0) {
+  if (num.toString().indexOf(first.toString()) >= 0) {
+    result = fizz;
+  } else {
+    result = rul3And4(first, second, third, num);
+  }
+  return result;
+}
+
+function rul3And4(first, second, third, num) {
+  let result = "";
+  if (num % first === 0) {
     result += fizz;
   }
-  if (num % secondNum === 0) {
+  if (num % second === 0) {
     result += buzz;
   }
-  if (num % thirdNum === 0) {
+  if (num % third === 0) {
     result += whizz;
   }
   if (isEmpty(result)) {
@@ -58,4 +65,4 @@ function isPositiveInteger(str) {
   return typeof str === 'number' && n === str && n >= 0;
 }
 
-fizzBuzzWhizz([3, 5, 7]);
+fizzBuzzWhizz([3, 4, 5]);
