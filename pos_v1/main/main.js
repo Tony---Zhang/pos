@@ -9,8 +9,8 @@ function initShoppingCart(input, items) {
   let shoppingItems = [];
   input.forEach(inputItem => {
     const shoppingItem = parseItem(inputItem);
-    const find = shoppingItems.filter(element => {
-      return element.barcode === shoppingItem.barcode;
+    const find = shoppingItems.filter(shoppingItem => {
+      return shoppingItem.barcode === shoppingItem.barcode;
     })[0];
     if (find) {
       find.count += shoppingItem.count;
@@ -18,11 +18,11 @@ function initShoppingCart(input, items) {
       shoppingItems.push(shoppingItem);
     }
   });
-  return shoppingItems.map(element => {
+  return shoppingItems.map(shoppingItem => {
     const find = items.filter(item => {
-      return item.barcode === element.barcode;
+      return item.barcode === shoppingItem.barcode;
     })[0];
-    return {item: find, count: element.count};
+    return {item: find, count: shoppingItem.count};
   });
 }
 
@@ -31,7 +31,7 @@ function applyPromise(cartItems, promotions) {
     const promotion = promotions.filter(promotion => {
       return promotion.barcodes.indexOf(cartItem.item.barcode) > -1;
     });
-    if (promotion == 0) {
+    if (promotion.length === 0) {
       return normalPromise(cartItem);
     }
     switch (promotion[0].type) {
