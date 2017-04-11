@@ -2,7 +2,7 @@
 
 function parseItem(input) {
   let split = input.split('-');
-  return {barcode: split[0], count: parseInt(split[1] || 1)};
+  return {barcode: split[0], count: parseFloat(split[1] || 1)};
 }
 
 function initShoppingCart(input, items) {
@@ -52,59 +52,34 @@ function normalPromise(cartItem) {
   return Object.assign({}, cartItem, {total: cartItem.count * cartItem.item.price, saved: 0});
 }
 
-let receiptItems = applyPromise(initShoppingCart(['ITEM000003-5', 'ITEM000001', 'ITEM000003-2', 'ITEM000001-4'], loadAllItems()), loadPromotions());
-console.log(receiptItems);
+function printReceipt(receiptItems) {
+  let receipt = '';
+  let total = 0;
+  let saved = 0;
+  receipt += '***<没钱赚商店>收据***\n';
+  receiptItems.forEach(receiptItem => {
+    receipt += formatReceiptItem(receiptItem);
+    total += receiptItem.total;
+    saved += receiptItem.saved;
+  });
+  receipt += '----------------------\n';
+  receipt += `总计：${formatPrice(total)}\n`;
+  receipt += `节省：${formatPrice(saved)}\n`;
+  receipt += '**********************';
+  return receipt;
 
-function loadAllItems() {
-  return [
-    {
-      barcode: 'ITEM000000',
-      name: '可口可乐',
-      unit: '瓶',
-      price: 3.00
-    },
-    {
-      barcode: 'ITEM000001',
-      name: '雪碧',
-      unit: '瓶',
-      price: 3.00
-    },
-    {
-      barcode: 'ITEM000002',
-      name: '苹果',
-      unit: '斤',
-      price: 5.50
-    },
-    {
-      barcode: 'ITEM000003',
-      name: '荔枝',
-      unit: '斤',
-      price: 15.00
-    },
-    {
-      barcode: 'ITEM000004',
-      name: '电池',
-      unit: '个',
-      price: 2.00
-    },
-    {
-      barcode: 'ITEM000005',
-      name: '方便面',
-      unit: '袋',
-      price: 4.50
-    }
-  ];
 }
 
-function loadPromotions() {
-  return [
-    {
-      type: 'BUY_TWO_GET_ONE_FREE',
-      barcodes: [
-        'ITEM000000',
-        'ITEM000001',
-        'ITEM000005'
-      ]
-    }
-  ];
+function main(input) {
+  let shoppingCart = initShoppingCart(input, loadAllItems());
+  const receipt = printReceipt(applyPromise(shoppingCart, loadPromotions()));
+  console.log(receipt);
+}
+
+function formatPrice(total) {
+  return `${parseFloat(total).toFixed(2)}(元)`;
+}
+
+function formatReceiptItem(receiptItem) {
+  return `名称：${receiptItem.item.name}，数量：${receiptItem.count + receiptItem.item.unit}，单价：${formatPrice(receiptItem.item.price)}，小计：${formatPrice(receiptItem.total)}\n`;
 }
