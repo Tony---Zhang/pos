@@ -52,7 +52,7 @@ function normalPromise(cartItem) {
   return Object.assign({}, cartItem, {total: cartItem.count * cartItem.item.price, saved: 0});
 }
 
-function printReceipt(receiptItems) {
+function buildReceipt(receiptItems) {
   let receipt = '';
   let total = 0;
   let saved = 0;
@@ -70,9 +70,9 @@ function printReceipt(receiptItems) {
 
 }
 
-function main(input) {
+function printReceipt(input) {
   let shoppingCart = initShoppingCart(input, loadAllItems());
-  const receipt = printReceipt(applyPromise(shoppingCart, loadPromotions()));
+  const receipt = buildReceipt(applyPromise(shoppingCart, loadPromotions()));
   console.log(receipt);
 }
 
