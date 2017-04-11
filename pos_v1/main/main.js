@@ -8,8 +8,8 @@ function parseItem(input) {
 function initShoppingCart(input, items) {
   let shoppingItems = [];
   input.forEach(inputItem => {
-    let shoppingItem = parseItem(inputItem);
-    let find = shoppingItems.filter(element => {
+    const shoppingItem = parseItem(inputItem);
+    const find = shoppingItems.filter(element => {
       return element.barcode === shoppingItem.barcode;
     })[0];
     if (find) {
@@ -19,15 +19,41 @@ function initShoppingCart(input, items) {
     }
   });
   return shoppingItems.map(element => {
-    let find = items.filter(item => {
+    const find = items.filter(item => {
       return item.barcode === element.barcode;
     })[0];
     return {item: find, count: element.count};
   });
 }
 
-let cart = initShoppingCart(['ITEM000003-5', 'ITEM000001', 'ITEM000003-2'], loadAllItems());
-console.log(cart);
+function applyPromise(cartItems, promotions) {
+  return cartItems.map(cartItem => {
+    const promotion = promotions.filter(promotion => {
+      return promotion.barcodes.indexOf(cartItem.item.barcode) > -1;
+    });
+    if (promotion == 0) {
+      return normalPromise(cartItem);
+    }
+    switch (promotion[0].type) {
+      case 'BUY_TWO_GET_ONE_FREE':
+        return buyTwoGetOneFreePromise(cartItem);
+      default:
+        return normalPromise(cartItem);
+    }
+  })
+}
+
+function buyTwoGetOneFreePromise(cartItem) {
+  const saved = cartItem.item.price * Math.floor(cartItem.count / 3);
+  return Object.assign({}, cartItem, {total: cartItem.count * cartItem.item.price - saved, saved: saved});
+}
+
+function normalPromise(cartItem) {
+  return Object.assign({}, cartItem, {total: cartItem.count * cartItem.item.price, saved: 0});
+}
+
+let receiptItems = applyPromise(initShoppingCart(['ITEM000003-5', 'ITEM000001', 'ITEM000003-2', 'ITEM000001-4'], loadAllItems()), loadPromotions());
+console.log(receiptItems);
 
 function loadAllItems() {
   return [
@@ -66,6 +92,19 @@ function loadAllItems() {
       name: '方便面',
       unit: '袋',
       price: 4.50
+    }
+  ];
+}
+
+function loadPromotions() {
+  return [
+    {
+      type: 'BUY_TWO_GET_ONE_FREE',
+      barcodes: [
+        'ITEM000000',
+        'ITEM000001',
+        'ITEM000005'
+      ]
     }
   ];
 }
