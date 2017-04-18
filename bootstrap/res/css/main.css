@@ -1,0 +1,40 @@
+.topbar {
+  height: 46px;
+  position: fixed;
+  background-color: #181818;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.topbar .brand {
+  float: left;
+  display: block;
+  padding: 9px 20px 8px;
+  margin-left: -20px;
+  color: #fff;
+  line-height: 1;
+}
+
+.topbar .title {
+  float: left;
+  font-size: 24px !important;
+  font-weight: normal !important;
+  line-height: 24px !important;
+  padding: 0 !important;
+  margin: 11px 0 0 15px !important;
+  letter-spacing: -1px;
+}
+
+.topbar .remove {
+  float: right;
+  text-align: right;
+}
+
+.topbar.remove a {
+  color: #333 !important;
+}
+
+.topbar a {
+  color: #bfbfbf;
+}
