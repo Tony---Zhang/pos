@@ -48,15 +48,12 @@ body {
 }
 
 .main {
-}
-
-.main .section {
   margin-top: 125px;
   margin-bottom: 15px;
   background: #fff;
 }
 
-.main .section .profile_section {
+.main .profile_section {
   position: relative;
   top: -75px;
   text-transform: uppercase;
@@ -72,6 +69,21 @@ body {
 .profile_section .avatar {
   width: 150px;
   height: 150px;
+}
+
+.main .section {
+
+}
+
+.main .section h2 {
+  color: #EC7263;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.section h2:before {
+  content: '//';
+  margin-right: 5px;
 }
 
 /***************************************************
