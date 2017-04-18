@@ -1,3 +1,20 @@
+body {
+  background: #ededed;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.color_primer {
+  color: #F0563D;
+}
+
+.color_dk_grey {
+  color: #333;
+}
+
+.color_lt_grey {
+  color: #bfbfbf;
+}
+
 .topbar {
   height: 46px;
   position: fixed;
@@ -12,7 +29,6 @@
   display: block;
   padding: 9px 20px 8px;
   margin-left: -20px;
-  color: #fff;
   line-height: 1;
 }
 
@@ -31,17 +47,7 @@
   text-align: right;
 }
 
-.topbar.remove a {
-  color: #333 !important;
-}
-
-.topbar a {
-  color: #bfbfbf;
-}
-
 .main {
-  background: #ededed;
-  font-family: "Open Sans", Arial, sans-serif;
 }
 
 .main .section {
@@ -53,30 +59,7 @@
 .main .section .profile_section {
   position: relative;
   top: -75px;
-}
-
-#profile_title {
-  font-size: 36px;
-  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: -3px;
-  margin-top: 10px;
-}
-
-#profile_subtitle {
-  color: #333;
-  font-weight: 700;
-  letter-spacing: -1px;
-  margin-top: -2px;
-}
-
-#profile_subtitle span {
-  color: #F0563D;
-}
-
-#profile_subtitle sup {
-  top: -.5em;
-  opacity: 0.5;
 }
 
 .profile_section .photo .avatar {
@@ -89,4 +72,26 @@
 .profile_section .avatar {
   width: 150px;
   height: 150px;
+}
+
+/***************************************************
+ * ID zones
+ ***************************************************/
+
+#profile_title {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -4px;
+  margin-top: 10px;
+}
+
+#profile_subtitle {
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-top: -2px;
+}
+
+#profile_subtitle sup {
+  top: -.5em;
+  opacity: 0.5;
 }
