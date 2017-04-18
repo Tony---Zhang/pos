@@ -5,28 +5,30 @@
   <title>DOM</title>
 </head>
 <body>
-<h1>统一建模语言理论测试</h1>
-<div>
-  <table border="0">
-    <tr>
-      <td>考试科目:</td>
-      <td>统一建模语言</td>
-      <td>时间:</td>
-      <td>100分钟</td>
-      <td>得分:</td>
-      <td>100</td>
-    </tr>
-    <tr>
-      <td>班级:</td>
-      <td><input type="text" title="klass" value="1班"></td>
-      <td>学号</td>
-      <td><input type="text" title="number" value="001"></td>
-      <td>姓名</td>
-      <td><input type="text" title="name" value="王小闹"></td>
-    </tr>
-  </table>
-</div>
+<header>
+  <h1>统一建模语言理论测试</h1>
+</header>
 <form>
+  <div>
+    <table>
+      <tr>
+        <td>考试科目:</td>
+        <td>统一建模语言</td>
+        <td>时间:</td>
+        <td>100分钟</td>
+        <td>得分:</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>班级:</td>
+        <td><input type="text" title="klass" value="1班"></td>
+        <td>学号</td>
+        <td><input type="text" title="number" value="001"></td>
+        <td>姓名</td>
+        <td><input type="text" title="name" value="王小闹"></td>
+      </tr>
+    </table>
+  </div>
   <div id="completion">
     <h2>一、填空题(每空5分，共20分)</h2>
     <ol>
@@ -44,31 +46,55 @@
     <h2>二、选择题(每题10分，共20分)</h2>
     <ol>
       <li>UML与软件工程的关系是:
-        <p>
-          <input type="radio" title="single_choice_1" name="single_choice_1" value="uml_is_software_engineer">(A)
-          UML就是软件工程
-          <br>
-          <input type="radio" title="single_choice_1" name="single_choice_1"
-                 value="uml_take_part_in_software_development" checked>(B)
-          UML参与到软件工程中软件开发过程的几个阶段
-          <br>
-          <input type="radio" title="single_choice_1" name="single_choice_1"
-                 value="uml_not_have_relationship_with_software">(C) UML与软件工程无关
-          <br>
-          <input type="radio" title="single_choice_1" name="single_choice_1"
-                 value="uml_is_a_part_of_software_development">(D) UML是软件工程的一部分
-        </p>
+        <ul>
+          <li>
+            <label>
+              <input type="radio" name="single_choice_1" value="uml_is_software_engineer">(A) UML就是软件工程
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="single_choice_1"
+                     value="uml_take_part_in_software_development" checked>(B) UML参与到软件工程中软件开发过程的几个阶段
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="single_choice_1"
+                     value="uml_not_have_relationship_with_software">(C) UML与软件工程无关
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="single_choice_1"
+                     value="uml_is_a_part_of_software_development">(D) UML是软件工程的一部分
+            </label>
+          </li>
+        </ul>
       </li>
       <li>Java语言支持:
-        <p>
-          <input type="radio" title="single_choice_2" name="single_choice_2" value="single_extend" checked>(A) 单继承
-          <br>
-          <input type="radio" title="single_choice_2" name="single_choice_2" value="multiple_extend">(B) 多继承
-          <br>
-          <input type="radio" title="single_choice_2" name="single_choice_2" value="all_extends">(C) 单继承和多继承都支持
-          <br>
-          <input type="radio" title="single_choice_2" name="single_choice_2" value="none_extends">(D) 单继承和多继承都不支持
-        </p>
+        <ul>
+          <li>
+            <label>
+              <input type="radio" name="single_choice_2" value="single_extend" checked>(A) 单继承
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="single_choice_2" value="multiple_extend">(B) 多继承
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="single_choice_2" value="all_extends">(C) 单继承和多继承都支持
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="single_choice_2" value="none_extends">(D) 单继承和多继承都不支持
+            </label>
+          </li>
+        </ul>
       </li>
     </ol>
   </div>
@@ -76,28 +102,52 @@
     <h2>三、多择题(每题10分，共20分)</h2>
     <ol>
       <li>用例的粒度分为以下哪三种:
-        <p>
-          <input type="checkbox" title="multiple_choice_1" name="multiple_choice_1" value="overview" checked>(A) 概述级
-          <br>
-          <input type="checkbox" title="multiple_choice_1" name="multiple_choice_1" value="requirement" checked>(B) 需求级
-          <br>
-          <input type="checkbox" title="multiple_choice_1" name="multiple_choice_1" value="user_target">(C) 用户目标级
-          <br>
-          <input type="checkbox" title="multiple_choice_1" name="multiple_choice_1" value="subfunction" checked>(D) 子功能级
-        </p>
+        <ul>
+          <li>
+            <label>
+              <input type="checkbox" name="multiple_choice_1" value="overview" checked>(A) 概述级
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="multiple_choice_1" value="requirement" checked>(B)需求级
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="multiple_choice_1" value="user_target">(C) 用户目标级
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="multiple_choice_1" value="subfunction" checked>(D)子功能级
+            </label>
+          </li>
+        </ul>
       </li>
       <li>类图由以下哪三部分组成:
-        <p>
-          <input type="checkbox" title="multiple_choice_2" name="multiple_choice_2" value="name" checked>(A) 名称(Name)
-          <br>
-          <input type="checkbox" title="multiple_choice_2" name="multiple_choice_2" value="attribute" checked>(B)
-          属性(Attribute)
-          <br>
-          <input type="checkbox" title="multiple_choice_2" name="multiple_choice_2" value="operation" checked>(C)
-          操作(Operation)
-          <br>
-          <input type="checkbox" title="multiple_choice_2" name="multiple_choice_2" value="function">(D) 方法(Function)
-        </p>
+        <ul>
+          <li>
+            <label>
+              <input type="checkbox" name="multiple_choice_2" value="name" checked>(A) 名称(Name)
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="multiple_choice_2" value="attribute" checked>(B)属性(Attribute)
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="multiple_choice_2" value="operation" checked>(C)操作(Operation)
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="multiple_choice_2" value="function">(D) 方法(Function)
+            </label>
+          </li>
+        </ul>
       </li>
     </ol>
   </div>
@@ -105,12 +155,20 @@
     <h2>四、判断题(每题10分，共20分)</h2>
     <ol>
       <li>用例图只是用于和客户交流和沟通的,用于确定需求。
-        <input type="radio" title="true_or_false_1" name="true_or_false_1" value="ture">√
-        <input type="radio" title="true_or_false_1" name="true_or_false_1" value="false" checked>×
+        <label>
+          <input type="radio" name="true_or_false_1" value="true">√
+        </label>
+        <label>
+          <input type="radio" name="true_or_false_1" value="false" checked>×
+        </label>
       </li>
       <li>在状态图中,终止状态在一个状态图中允许有任意多个。
-        <input type="radio" title="true_or_false_2" name="true_or_false_2" value="true" checked>√
-        <input type="radio" title="true_or_false_2" name="true_or_false_2" value="false">×
+        <label>
+          <input type="radio" name="true_or_false_2" value="true" checked>√
+        </label>
+        <label>
+          <input type="radio" name="true_or_false_2" value="false">×
+        </label>
       </li>
     </ol>
   </div>
@@ -118,7 +176,8 @@
     <h2>五、简答题(每题20分，共20分)</h2>
     <ol>
       <li>简述什么是模型以及模型的表现形式?
-        <br>
+      </li>
+      <li>
         <textarea cols="100" rows="8" title="short_answer_1">模型是对现实世界的简化和抽象，模型是对所研究的系统、过程、事物或概念的一种表达形式。可以是物理实体；可以是某种图形；或者是一种数学表达式。</textarea>
       </li>
     </ol>
