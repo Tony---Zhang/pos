@@ -38,3 +38,55 @@
 .topbar a {
   color: #bfbfbf;
 }
+
+.main {
+  background: #ededed;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.main .section {
+  margin-top: 125px;
+  margin-bottom: 15px;
+  background: #fff;
+}
+
+.main .section .profile_section {
+  position: relative;
+  top: -75px;
+}
+
+#profile_title {
+  font-size: 36px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  margin-top: 10px;
+}
+
+#profile_subtitle {
+  color: #333;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-top: -2px;
+}
+
+#profile_subtitle span {
+  color: #F0563D;
+}
+
+#profile_subtitle sup {
+  top: -.5em;
+  opacity: 0.5;
+}
+
+.profile_section .photo .avatar {
+  width: 160px;
+  height: 160px;
+  padding: 5px;
+  background: #ededed;
+}
+
+.profile_section .avatar {
+  width: 150px;
+  height: 150px;
+}
