@@ -164,6 +164,40 @@ body {
   opacity: 0.7;
 }
 
+.contact-item {
+  width: 100%;
+  float: left;
+}
+
+.contact-item .left {
+  padding: 10px;
+  border-right: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  opacity: 0.2;
+}
+
+.contact-item .left span {
+  font-size: 20px;
+}
+
+.contact-item .right {
+  width: calc(100% - 55px);
+}
+
+.contact-item .right .title {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.contact-item .right .title.only {
+  margin-top: 10px;
+}
+
+.contact-item .right .descript {
+  opacity: 0.7;
+  font-size: smaller;
+}
+
 /***************************************************
  * ID zones
  ***************************************************/
