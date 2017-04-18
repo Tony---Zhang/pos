@@ -139,6 +139,31 @@ body {
   border-right-color: #eee;
 }
 
+.job {
+  margin-bottom: 10px;
+}
+
+.job h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.job p {
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+.job .company {
+  font-weight: 700;
+}
+
+.job .year {
+  font-size: small;
+  opacity: 0.7;
+}
+
 /***************************************************
  * ID zones
  ***************************************************/
