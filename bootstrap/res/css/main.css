@@ -50,7 +50,7 @@ body {
 .main {
   margin-top: 125px;
   margin-bottom: 15px;
-  background: #fff;
+  background: white;
 }
 
 .main .profile_section {
@@ -84,6 +84,59 @@ body {
 .section h2:before {
   content: '//';
   margin-right: 5px;
+}
+
+.timeline {
+  padding: 0;
+}
+
+.timeline li {
+  list-style: none;
+  width: 100%;
+  position: relative;
+  float: left;
+}
+
+.timeline li h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.timeline li p {
+  margin-top: 5px;
+  font-size: small;
+}
+
+.timeline .left {
+  width: 10%;
+  display: inline-block;
+  padding-top: 13px;
+  font-weight: bold;
+  font-size: 14px;
+  background: white;
+}
+
+.timeline .right {
+  width: 90%;
+  background: #eee;
+  display: inline-block;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 10px 0 10px;
+}
+
+.timeline .right:before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 0;
+  left: 45px;
+  height: 0;
+  width: 0;
+  border: 8px solid transparent;
+  border-right-color: #eee;
 }
 
 /***************************************************
