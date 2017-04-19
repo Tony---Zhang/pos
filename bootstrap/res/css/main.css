@@ -343,12 +343,13 @@ h3 {
 .hobby {
   background: #A75265;
   padding: 5px;
-  margin-right: 5px;
-  margin-bottom: 5px;
+  margin-right: 3px;
+  margin-bottom: 3px;
   display: inline-block;
   font-size: 12px;
 }
 
 .hobby span {
-  margin-right: 4px;
+  font-size: 13px;
+  margin-right: 3px;
 }
