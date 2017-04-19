@@ -42,6 +42,7 @@ h3 {
 }
 
 .topbar {
+  z-index: 9999;
   height: 46px;
   position: fixed;
   background-color: #181818;
@@ -65,11 +66,13 @@ h3 {
   padding: 0;
   margin: 11px 0 0 15px;
   letter-spacing: -1px;
+  display: inline-block;
 }
 
 .topbar .remove {
   float: right;
   text-align: right;
+  display: inline-block;
 }
 
 .main {
