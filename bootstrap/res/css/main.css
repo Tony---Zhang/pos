@@ -199,11 +199,39 @@ h3 {
 }
 
 .skill-items {
-
+  width: 100%;
 }
 
 .skill-items .item {
+  background: #F0563D;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
+.skill-items .item:first-child {
+  width: 100%;
+}
+
+.skill-items .item:nth-child(2) {
+  width: 90%;
+}
+
+.skill-items .item:nth-child(3) {
+  width: 80%;
+}
+
+.skill-items .item:nth-child(4) {
+  width: 75%;
+}
+
+.skill-items .item:nth-child(5) {
+  width: 25%;
 }
 
 .skill-level {
