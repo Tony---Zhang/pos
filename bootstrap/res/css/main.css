@@ -216,12 +216,16 @@ h3 {
 }
 
 .language {
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 10px;
 }
 
 .language .left {
 }
 
-.language .right {
+.language .right span {
+  font-size: 16px;
+  margin-left: 4px;
 }
 
 .hobby {
