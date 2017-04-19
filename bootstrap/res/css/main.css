@@ -49,11 +49,11 @@ h3 {
 
 .topbar .title {
   float: left;
-  font-size: 24px !important;
-  font-weight: normal !important;
-  line-height: 24px !important;
-  padding: 0 !important;
-  margin: 11px 0 0 15px !important;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 24px;
+  padding: 0;
+  margin: 11px 0 0 15px;
   letter-spacing: -1px;
 }
 
@@ -85,6 +85,24 @@ h3 {
 .profile_section .avatar {
   width: 150px;
   height: 150px;
+}
+
+.profile_section .profile_title {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -4px;
+  margin-top: 10px;
+}
+
+.profile_section .profile_subtitle {
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-top: -2px;
+}
+
+.profile_section .profile_subtitle sup {
+  top: -.5em;
+  opacity: 0.5;
 }
 
 .main .section {
@@ -178,6 +196,10 @@ h3 {
 
 .contact-item .left span {
   font-size: 20px;
+}
+
+.contact-item:last-child .left {
+  border-bottom: none;
 }
 
 .contact-item .right {
@@ -308,26 +330,4 @@ h3 {
 
 .hobby span {
   margin-right: 4px;
-}
-
-/***************************************************
- * ID zones
- ***************************************************/
-
-#profile_title {
-  font-size: 36px;
-  font-weight: 800;
-  letter-spacing: -4px;
-  margin-top: 10px;
-}
-
-#profile_subtitle {
-  font-weight: 700;
-  letter-spacing: -1px;
-  margin-top: -2px;
-}
-
-#profile_subtitle sup {
-  top: -.5em;
-  opacity: 0.5;
 }
