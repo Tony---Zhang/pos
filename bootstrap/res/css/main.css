@@ -250,7 +250,7 @@ h3 {
 .skill-items .item {
   background: #F0563D;
   margin-bottom: 5px;
-  padding: 5px 10px;
+  padding: 5px 10px 7px 10px;
   font-size: 13px;
   font-weight: 600;
   white-space: nowrap;
@@ -295,7 +295,7 @@ h3 {
   display: inline-block;
   border: none;
   width: 25%;
-  margin-top: 20px;
+  margin-top: 22px;
 }
 
 .skill-level .item .title {
@@ -304,19 +304,19 @@ h3 {
 }
 
 .skill-level .item:nth-child(2) .title {
-  margin-left: -22px;
+  margin-left: -25px;
 }
 
 .skill-level .item:nth-child(3) .title {
-  margin-right: -16px;
+  margin-right: -20px;
 }
 
 .skill-level .item:before {
   content: '';
   background: #c6c6c6;
   width: 3px;
-  height: 10px;
-  margin-top: -20px;
+  height: 7px;
+  margin-top: -22px;
 }
 
 .skill-level .item-left:before {
