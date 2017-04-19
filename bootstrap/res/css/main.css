@@ -3,6 +3,21 @@ body {
   font-family: "Open Sans", Arial, sans-serif;
 }
 
+p {
+  font-size: small
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/***************************************************
+ * Customization
+ ***************************************************/
+
 .color_primer {
   color: #F0563D;
 }
@@ -99,16 +114,8 @@ body {
   float: left;
 }
 
-.timeline li h3 {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  font-weight: bold;
-}
-
 .timeline li p {
   margin-top: 5px;
-  font-size: small;
 }
 
 .timeline .left {
@@ -141,13 +148,6 @@ body {
 
 .job {
   margin-bottom: 10px;
-}
-
-.job h3 {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  font-weight: bold;
 }
 
 .job p {
@@ -218,8 +218,4 @@ body {
 #profile_subtitle sup {
   top: -.5em;
   opacity: 0.5;
-}
-
-#about_container p {
-  font-size: small;
 }
