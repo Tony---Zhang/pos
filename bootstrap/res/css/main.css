@@ -235,12 +235,52 @@ h3 {
 }
 
 .skill-level {
+  margin-top: 20px;
+  width: 100%;
+  font-size: 0;
+}
 
+.skill-level:before {
+  content: '';
+  border-bottom: 3px solid #c6c6c6;
+  width: 100%;
+  position: relative;
 }
 
 .skill-level .item {
   display: inline-block;
-  color: #a9a9a9
+  border: none;
+  width: 25%;
+  margin-top: 20px;
+}
+
+.skill-level .item .title {
+  color: #a9a9a9;
+  font-size: 12px;
+}
+
+.skill-level .item:nth-child(2) .title {
+  margin-left: -22px;
+}
+
+.skill-level .item:nth-child(3) .title {
+  margin-right: -16px;
+}
+
+.skill-level .item:before {
+  content: '';
+  background: #c6c6c6;
+  width: 3px;
+  height: 10px;
+  margin-top: -20px;
+}
+
+.skill-level .item-left:before {
+  float: left;
+}
+
+.skill-level .item-right:before {
+  float: right;
 }
 
 .language {
@@ -261,6 +301,7 @@ h3 {
   background: #A75265;
   padding: 5px;
   margin-right: 5px;
+  margin-bottom: 5px;
   display: inline-block;
   font-size: 12px;
 }
