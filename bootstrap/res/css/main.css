@@ -214,6 +214,7 @@ h3 {
   border-right: 1px solid #aaa;
   border-bottom: 1px solid #aaa;
   opacity: 0.2;
+  font-size: 0;
 }
 
 .contact-item .left span {
@@ -239,7 +240,7 @@ h3 {
 
 .contact-item .right .descript {
   opacity: 0.7;
-  font-size: smaller;
+  font-size: 12px;
 }
 
 .skill-items {
